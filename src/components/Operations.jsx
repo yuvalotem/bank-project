@@ -48,7 +48,7 @@ class Operations extends Component {
 
     addOutcomeTransaction = () => {
         const {amount} = this.state
-        if(this.props.balance + amount < 500){
+        if(this.props.balance - amount < 500){
             this.setState({ openInsufficient: true })
             return
         }
@@ -128,7 +128,7 @@ class Operations extends Component {
                 <Snackbar open={this.state.openSuccsess} autoHideDuration={3000} onClose={this.handleClose}>
                 <Alert severity="success">Expense was added</Alert>
                 </Snackbar>
-                
+
             </div>
         );
     }
