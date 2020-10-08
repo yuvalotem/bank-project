@@ -7,10 +7,13 @@ class Menu extends Component {
             <nav>
                 <div className="nav-wrapper blue-grey lighten-1">
                     <Link to='/' className="brand-logo"> Logo </Link>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to='/transactions'> Transactions </Link></li>
-                        <li><Link to='/operations'> Operations </Link></li>
-                        <li><Link to='/breakdown'> Breakdown </Link></li>
+                    <ul id="nav-mobile" className="right">
+                        <li><i className="fas fa-bars" onClick={this.props.changeMenu}></i></li>
+                        <li><a href='#'></a></li>
+                    </ul>
+                    <ul id="nav-mobile" className="left">
+                        <li><a href='#'></a></li>
+                        <li>Balance: {this.props.balance}₪</li>
                     </ul>
                 </div>
             </nav>
