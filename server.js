@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use('/', api)
 
-mongoose.connect("mongodb://localhost/bank", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://localhost/nasaImages", { useNewUrlParser: true, useUnifiedTopology: true })
 
 const port = 4000
 app.listen(port, function(req, res){

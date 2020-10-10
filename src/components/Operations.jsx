@@ -42,7 +42,11 @@ class Operations extends Component {
         this.props.addTransaction(transaction)
         this.setState({ 
             clicked: true,
-            openSuccsess: true
+            openSuccsess: true,
+            amount: '',
+            vendor: '',
+            category: '',
+            date: ''
         })
     }
 
@@ -66,9 +70,9 @@ class Operations extends Component {
     }
 
     render() {
-        if (this.state.clicked) {
-            return <Redirect to='/transactions' />
-        }
+        // if (this.state.clicked) {
+        //     return <Redirect to='/transactions' />
+        // }
         return (
             <div className="row">
                 <div className="row">
